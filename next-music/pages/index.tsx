@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Link from 'next/link'
 import styles from '../styles/Home.module.css'
 
 export default function Home() {
@@ -8,7 +9,9 @@ export default function Home() {
         <title>Next Music TESTE</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <h1>Musics</h1>
+      <Link href="/musics">
+        <a className={`display-1 ${styles.header}`}>Musics</a>
+      </Link>
     </div>
   )
 }

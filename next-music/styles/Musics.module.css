@@ -1,0 +1,14 @@
+
+.buttons {
+	width: 5%;
+}
+
+.add {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.input {
+	margin: 30px 20px;
+}
