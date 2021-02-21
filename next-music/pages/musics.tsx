@@ -5,7 +5,7 @@ import { Button, Table } from 'react-bootstrap'
 export default function Musics({ musics }) {
 	return ( 
 		<div className="container">
-			<h1 className="display-1">Music List;kfd';gl</h1>
+			<h1 className="display-1">Music List</h1>
 
 			<Table>
 				<thead>
@@ -16,7 +16,7 @@ export default function Musics({ musics }) {
 				</thead>
 				{
 					musics.map(music => 
-						<tr>
+						<tr key={music._id}>
 							<td>{ music.name }</td>
 							<td>{ music.band }</td>
 						</tr>
@@ -35,6 +35,5 @@ export const getStaticProps: GetStaticProps = async () => {
 		props: {
 			musics: data
 		},
-		revalidate: 30
 	}
 }
